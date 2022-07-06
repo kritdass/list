@@ -42,45 +42,44 @@ function App() {
 
   return (
     <div className="App">
-      <div className="form">
-        <input
-          type="number"
-          value={newItem.quantity}
-          onChange={handleChange}
-          id="quantity"
-          name="quantity"
-          min="1"
-        />
-        <input
-          type="text"
-          placeholder="Item"
-          value={newItem.item}
-          onChange={handleChange}
-          id="item"
-          name="item"
-        />
-        <input
-          type="text"
-          placeholder="Notes"
-          value={newItem.notes}
-          onChange={handleChange}
-          id="notes"
-          name="notes"
-        />
-        <button
-          onClick={() => {
-            setItems((prevState) => [newItem, ...prevState]);
-            setNewItem({
-              quantity: 1,
-              item: "",
-              notes: "",
-            });
-          }}
-        >
-          Add Item
-        </button>
-      </div>
-
+      <input
+        type="number"
+        value={newItem.quantity}
+        onChange={handleChange}
+        id="quantity"
+        name="quantity"
+        min="1"
+      />
+      <input
+        type="text"
+        placeholder="Item"
+        value={newItem.item}
+        onChange={handleChange}
+        id="item"
+        name="item"
+      />
+      <input
+        type="text"
+        placeholder="Notes"
+        value={newItem.notes}
+        onChange={handleChange}
+        id="notes"
+        name="notes"
+      />
+      <button
+        onClick={() => {
+          setItems((prevState) => [newItem, ...prevState]);
+          setNewItem({
+            quantity: 1,
+            item: "",
+            notes: "",
+          });
+        }}
+      >
+        Add Item
+      </button>
+      <br />
+      <br />
       <table>
         <thead>
           <tr
